@@ -42,6 +42,7 @@ header {
 	width: 425px;
 	height: 200px;
 	position: relative;
+	margin-bottom: 0px;
 }
 
 .box {
@@ -80,6 +81,7 @@ padding-top: 100px;
 color: #BDBDBD;
 opacity: .75;
 font-family: Courier New;
+margin: 0px;
 }
 
 
@@ -105,4 +107,11 @@ font-family: Courier New;
 	background-color: #00BCD4;
 	border-bottom-right-radius: 200px;
 	left: 218px;
+}
+
+footer {
+	color: #BDBDBD;
+	font-family: Courier New;
+	text-align: right;
+	margin-top: 0px;
 }
