@@ -84,6 +84,7 @@ var gameOver = function(){
 	player.playerSequence = [];
 	computerSequence = [];
 	incorrectSteps = 0;
+	$roundCount.text("")
 	over1.play();
 	window.setTimeout(function(){over2.play()} , 1);
 	window.alert("GAME OVER. Click START to try again.");

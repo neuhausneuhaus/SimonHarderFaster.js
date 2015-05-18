@@ -3,8 +3,8 @@ body {
 }
 
 #game {
-	max-width: 1100px;
-	min-width: 820px;
+	max-width: 900px;
+	min-width: 620px;
 	margin:(0 auto);
 }
 
@@ -12,28 +12,28 @@ body {
 	font-family: Courier New;
 	position: relative;
 	background-color: #BDBDBD;
-	left: 260px;
+	left: 160px;
 	height: 60px;
 	width: 100px;
 	margin-bottom: 20px;
 }
 
 #row1{
-	width: 625px;
-	height: 300px;
+	width: 425px;
+	height: 200px;
 	position: relative;
 }
 #row2{
-	width: 625px;
-	height: 300px;
+	width: 425px;
+	height: 200px;
 	position: relative;
 }
 
 .box {
 	border-width:3px;
 	border-style: outset;
-	height: 300px;
-	width: 300px;
+	height: 200px;
+	width: 200px;
 	position:absolute;
 	left: 0;
 	top: 0;
@@ -57,6 +57,7 @@ transition: opacity 1s, border-width .9s, border-style .5s, transform 1s;
 }
 #hall{
 	font-size: 18px;
+	color: #BDBDBD;
 }
 
 #roundCount {
@@ -79,25 +80,25 @@ font-family: Courier New;
 #box1{
 	float:left;
 	background-color: #E91E63;
-	border-top-left-radius: 300px;
+	border-top-left-radius: 200px;
 }
 #box2{
 	float:right;
 	background-color: #FFFF00;
-	border-top-right-radius: 300px;
-	left: 318px;
+	border-top-right-radius: 200px;
+	left: 218px;
 }
 
 #box3{
 	float:left;
 	background-color: #00C853;
-	border-bottom-left-radius: 300px;
+	border-bottom-left-radius: 200px;
 }
 #box4 {
 	float:right;
 	background-color: #00BCD4;
-	border-bottom-right-radius: 300px;
-	left: 318px;
+	border-bottom-right-radius: 200px;
+	left: 218px;
 }
 
 /*
