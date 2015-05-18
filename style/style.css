@@ -1,6 +1,18 @@
 body {
 	background-color: #111111;
 }
+header {
+	clear: both;
+	font-family: Courier New;
+	font-size: 80px;
+	color: #BDBDBD;
+	text-align: left;
+	line-height: 40px;
+	margin-top: -3px;
+	margin-bottom: 70px;	
+	margin-left: 50px;
+	text-decoration: underline;
+}
 
 #game {
 	max-width: 900px;
