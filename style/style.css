@@ -1,0 +1,121 @@
+body {
+	background-color: #111111;
+}
+
+#game {
+	max-width: 1100px;
+	min-width: 820px;
+	margin:(0 auto);
+}
+
+#startButton{
+	font-family: Courier New;
+	position: relative;
+	background-color: #BDBDBD;
+	left: 260px;
+	height: 60px;
+	width: 100px;
+	margin-bottom: 20px;
+}
+
+#row1{
+	width: 625px;
+	height: 300px;
+	position: relative;
+}
+#row2{
+	width: 625px;
+	height: 300px;
+	position: relative;
+}
+
+.box {
+	border-width:3px;
+	border-style: outset;
+	height: 300px;
+	width: 300px;
+	position:absolute;
+	left: 0;
+	top: 0;
+	opacity: .5;
+	transition: all 1s;
+}
+
+.lit {
+opacity: 1;
+border-width:5px;
+border-style: outset;
+/*perspective: 100px;*/
+transition: opacity 1s, border-width .9s, border-style .5s, transform 1s;
+}
+
+#hallOfFame {
+	float:right;
+	top:0;
+	color: #BDBDBD;
+	font-family: Courier New;
+}
+#hall{
+	font-size: 18px;
+}
+
+#roundCount {
+padding-top: 100px;
+color: #BDBDBD;
+opacity: .75;
+font-family: Courier New;
+}
+/*.boxOn {
+	border-width:3px;
+	border-style: outset;
+	height: 300px;
+	width: 300px;
+	position:absolute;
+	left: 0;
+	top: 0;
+	transition: visibility ;
+}*/
+
+#box1{
+	float:left;
+	background-color: #E91E63;
+	border-top-left-radius: 300px;
+}
+#box2{
+	float:right;
+	background-color: #FFFF00;
+	border-top-right-radius: 300px;
+	left: 318px;
+}
+
+#box3{
+	float:left;
+	background-color: #00C853;
+	border-bottom-left-radius: 300px;
+}
+#box4 {
+	float:right;
+	background-color: #00BCD4;
+	border-bottom-right-radius: 300px;
+	left: 318px;
+}
+
+/*
+#box1On{
+	float:left;
+	background-color: Red;
+}
+#box2On{
+	float:right;
+	background-color: Khaki;
+	left: 318px;
+}
+#box3On{
+	float:left;
+	background-color: MediumSeaGreen;
+}
+#box4On{
+	float:right;
+	background-color: SteelBlue;
+	left: 318px;
+}*/
