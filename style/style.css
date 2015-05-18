@@ -10,13 +10,9 @@ body {
 
 #startButton{
 	font-family: Courier New;
-<<<<<<< HEAD
+
 	font-size: 28px;
-	font-weight: 500;
-=======
-	font-size: 22px;
-	font-weight: 600;
->>>>>>> gh-pages
+	font-weight: 450;
 	position: relative;
 	background-color: #BDBDBD;
 	left: 160px;

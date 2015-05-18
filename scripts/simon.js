@@ -1,4 +1,4 @@
-console.log("js&html are all linked up")
+console.log("js&html are all linked up");
 
 //computerSequence: starts as blank array
 var computerSequence = [];
@@ -6,7 +6,7 @@ var computerSequence = [];
 //function that randomly generates next comp color, and adds it to computerSequence array.
 var generateNextCompColor = function(){
 	var nextMoveValue = Math.floor((Math.random() *4)+1);
-	var nextMove = ""
+	var nextMove = "";
 	if (nextMoveValue === 1){
 		nextMove = "r";
 	} else if (nextMoveValue === 2){
@@ -14,11 +14,11 @@ var generateNextCompColor = function(){
 	} else if (nextMoveValue === 3){
 		nextMove = "g";
 	} else if (nextMoveValue === 4){
-		nextMove = "b"
+		nextMove = "b";
 	}
 	computerSequence.push(nextMove);
 	console.log(computerSequence);
-}
+};
 
 //Object containing Player data
 var Player = function Player(){
@@ -42,36 +42,36 @@ var $roundCount = $("#roundCount");
 Player.prototype.isCorrect = function(){
 	var incorrectSteps = 0;
 	for (var i=0; i<this.playerSequence.length; i++){
-		console.log("this.playerSequence[i]: "+this.playerSequence[i])
-		console.log("computerSequence[i]: "+computerSequence[i])
+		console.log("this.playerSequence[i]: "+this.playerSequence[i]);
+		console.log("computerSequence[i]: "+computerSequence[i]);
 		if (this.playerSequence[i]!= computerSequence[i]){	
 			incorrectSteps += 1;
-			console.log("incorrectSteps: "+incorrectSteps)
+			console.log("incorrectSteps: "+incorrectSteps);
 		} 
 	}	
 		if (incorrectSteps > 0){
-			gameOver()
+			gameOver();
 	} else if (this.playerSequence.length === computerSequence.length) {
 		this.playerSequence = [];
 		generateNextCompColor();
-		$roundCount.text("Round: " + (computerSequence.length - 1)) //updates the roundCounter
-		window.setTimeout(function(){flashASequence(computerSequence)} , 1100);
+		$roundCount.text("Round: " + (computerSequence.length - 1)); //updates the roundCounter
+		window.setTimeout(function(){flashASequence(computerSequence);} , 1100);
 	
 	}
 
-}
+};
 // Hall of Fame Entry Func
 	$hallOl = $("#hall");
-	hallArray = []
+	hallArray = [];
 var enterHoF = function(){
-hallArray.push(player) //pushes entire player object (inlcudes .name and .endScore) to an array
-hallArray.sort(function(a,b) {return parseFloat(a.endScore) - parseFloat(b.endScore)}); //sorts that array by the .endScore of each player item
+hallArray.push(player); //pushes entire player object (inlcudes .name and .endScore) to an array
+hallArray.sort(function(a,b) {return parseFloat(a.endScore) - parseFloat(b.endScore);}); //sorts that array by the .endScore of each player item
 hallArray.reverse();
-$hallOl.empty() //empties the current HoF ol
+$hallOl.empty(); //empties the current HoF ol
 //vvvvv//loop that renders each index of HoF array, and enters it as a li in the HoF ol.
 for (var i =0; i<hallArray.length; i++){ 
 var $score = $("<li></li>").text(hallArray[i].name + ": " + hallArray[i].endScore+" points");
-$hallOl.append($score)
+$hallOl.append($score);
 }
 };
 
@@ -79,17 +79,17 @@ $hallOl.append($score)
 //--resets sequences
 //--START button reappears.
 var gameOver = function(){
-	player.endScore = (computerSequence.length - 1)
+	player.endScore = (computerSequence.length - 1);
 	enterHoF();
 	player.playerSequence = [];
 	computerSequence = [];
 	incorrectSteps = 0;
-	$roundCount.text("")
+	$roundCount.text("");
 	over1.play();
-	window.setTimeout(function(){over2.play()} , 1);
+	window.setTimeout(function(){over2.play();} , 1);
 	window.alert("GAME OVER. Click START to try again.");
 	$startButton.css("visibility", "visible");
-}
+};
 
 //func that flashes"this" box on , then off.
 // should work for both clicks and callouts
@@ -97,12 +97,11 @@ var flashes = function(box){
 	box.toggleClass("lit");
 	setTimeout(function(){
 		box.toggleClass("lit");}, 500);
-}
+};
 
 // function to flash latest computer sequence
-var flashASequence = function(seq){
-	for (var i = 0; i < seq.length; i++) {
-        ((function(n){
+
+var fruitLoops = function(n, seq){
             window.setTimeout(function(){
                 
                 if (seq[n] === "r"){
@@ -119,12 +118,16 @@ var flashASequence = function(seq){
                 	faster1.play();
                 }
                 
-            }, (n * 1250))
-        })(i))
-    }
-}
+            }, (n * 1250));
+        };
 
-flashASequence(computerSequence)
+var flashASequence = function(seq){
+	for (var i = 0; i < seq.length; i++) {
+        fruitLoops(i, seq);
+    }
+};
+
+flashASequence(computerSequence);
 
 
 
@@ -134,18 +137,18 @@ var $box1 = $("#box1");
 var $box2 = $("#box2");
 var $box3 = $("#box3");
 var $box4 = $("#box4");
-var $startButton = $("#startButton")
+var $startButton = $("#startButton");
 
 //events for START button
 // --generates first CompColor
 // ++button fades away?
 $startButton.click(function(){
-	console.log("START!")
-	player = new Player;
+	console.log("START!");
+	player = new Player();
 	generateNextCompColor();
 	flashASequence(computerSequence);
 	$startButton.css("visibility", "hidden");
-})
+});
 
 //audioElements
 var workIt1 = new Audio('audio/WorkIt1.mp3');
