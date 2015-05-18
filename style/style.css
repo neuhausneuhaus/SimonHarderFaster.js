@@ -10,6 +10,8 @@ body {
 
 #startButton{
 	font-family: Courier New;
+	font-size: 22px;
+	font-weight: 600;
 	position: relative;
 	background-color: #BDBDBD;
 	left: 160px;
