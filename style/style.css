@@ -66,16 +66,7 @@ color: #BDBDBD;
 opacity: .75;
 font-family: Courier New;
 }
-/*.boxOn {
-	border-width:3px;
-	border-style: outset;
-	height: 300px;
-	width: 300px;
-	position:absolute;
-	left: 0;
-	top: 0;
-	transition: visibility ;
-}*/
+
 
 #box1{
 	float:left;
@@ -100,23 +91,3 @@ font-family: Courier New;
 	border-bottom-right-radius: 200px;
 	left: 218px;
 }
-
-/*
-#box1On{
-	float:left;
-	background-color: Red;
-}
-#box2On{
-	float:right;
-	background-color: Khaki;
-	left: 318px;
-}
-#box3On{
-	float:left;
-	background-color: MediumSeaGreen;
-}
-#box4On{
-	float:right;
-	background-color: SteelBlue;
-	left: 318px;
-}*/
