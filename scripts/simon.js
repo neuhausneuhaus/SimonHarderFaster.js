@@ -29,7 +29,7 @@ var Player = function Player(){
 };
 
 //new BLANK player
-var player = new Player;
+// var player = new Player;
 
 
 var $roundCount = $("#roundCount");
@@ -66,6 +66,7 @@ Player.prototype.isCorrect = function(){
 var enterHoF = function(){
 hallArray.push(player) //pushes entire player object (inlcudes .name and .endScore) to an array
 hallArray.sort(function(a,b) {return parseFloat(a.endScore) - parseFloat(b.endScore)}); //sorts that array by the .endScore of each player item
+hallArray.reverse();
 $hallOl.empty() //empties the current HoF ol
 //vvvvv//loop that renders each index of HoF array, and enters it as a li in the HoF ol.
 for (var i =0; i<hallArray.length; i++){ 
@@ -83,6 +84,7 @@ var gameOver = function(){
 	player.playerSequence = [];
 	computerSequence = [];
 	incorrectSteps = 0;
+	$roundCount.text("")
 	over1.play();
 	window.setTimeout(function(){over2.play()} , 1);
 	window.alert("GAME OVER. Click START to try again.");
@@ -139,6 +141,7 @@ var $startButton = $("#startButton")
 // ++button fades away?
 $startButton.click(function(){
 	console.log("START!")
+	player = new Player;
 	generateNextCompColor();
 	flashASequence(computerSequence);
 	$startButton.css("visibility", "hidden");
