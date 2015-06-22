@@ -9,16 +9,36 @@
 </head>
 <body>
   <header> 
-    *SIMON*
+    <h1 id="title-simon">SimonFastStronger.js</h1>
+
   </header>
-  <button id=startButton>START</button>
+  <div id="rainbow-guard">
+    <div class="headColor1"></div>
+    <div class="headColor2"></div>
+    <div class="headColor3"></div>
+    <div class="headColor4"></div>
+  </div>
+
+  <br><br>
+
+<!-- <table id="headBar">
+    <tr>
+        <td class="headColor1"></td>
+        <td class="headColor2"></td>
+        <td class="headColor3"></td>
+        <td class="headColor4"></td>
+    </tr>
+</table> -->
+
+
   <div id="game">
-    <div id = "hallOfFame">
+  <button id="startButton">START</button>
+    <div id="hallOfFame">
       <h1 id="hallheader">Hall of Fame:</h1>
       <ol id="hall">
       </ol> 
     </div>
-    <div class = lightOff id="gameSpace">
+    <div id="gameSpace">
       <div id="row1">
         <div class="box" id="box1">
         </div>
@@ -35,10 +55,11 @@
       <div class="box" id="box4">
       </div>
     </div>
+        <h1 id="roundCount">&nbsp;</h1>
   </div>  
 
   <div>
-    <h1 id="roundCount"> </h1>
+
   </div>
   <footer>neuhausneuhaus® 2015</footer>
 
@@ -47,6 +68,6 @@
   <!-- see https://web.archive.org/web/*/http://s.cdpn.io/* for audio files -->
 
 
-  <script src= "scripts/simon.js"></script>
+  <script src="scripts/simon.js"></script>
 </body>
 </html>

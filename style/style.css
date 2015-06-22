@@ -1,23 +1,51 @@
 body {
 	background-color: #111111;
+	margin: 0;
 }
-header {
+#title-simon {
 	clear: both;
 	font-family: Courier New;
 	font-size: 80px;
 	color: #BDBDBD;
-	text-align: left;
+	text-align: center;
 	line-height: 40px;
-	margin-top: -3px;
+	margin-top: 50px;
 	margin-bottom: 50px;	
-	margin-left: 50px;
-	text-decoration: underline;
+	font-weight: normal;
+	font-size: 7.5vw;
+}
+
+#rainbow-guard {
+	width: 100%;
+	margin: 0;
+}
+#rainbow-guard div {
+	display: inline;
+	width: 25%;
+	height: 10px;
+	margin: 0;
+	border: none;
+	float: left;
+	opacity: .5;
+}
+
+.headColor1 {
+    background-color: #E91E63;
+}
+.headColor2 {
+    background-color: #FFFF00;
+}
+.headColor3 {
+		background-color: #00C853;
+}
+.headColor4 {
+		background-color: #00BCD4;
 }
 
 #game {
 	max-width: 900px;
 	min-width: 620px;
-	margin:(0 auto);
+	margin: 0 auto;
 }
 
 #startButton{
@@ -110,9 +138,16 @@ margin: 0px;
 }
 
 footer {
+	display: inline-block;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin:1em;
 	color: #BDBDBD;
 	font-family: Courier New;
 	font-size: 20px;
 	text-align: right;
 	margin-top: 0px;
 }
+
+
